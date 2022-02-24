@@ -1,0 +1,10 @@
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+const db = {};
+db.mongoose = mongoose;
+db.user = require("./user.model");
+db.role = require("./role.model");
+db.order =require('./order.model');
+db.checklist =require('./checklist.model');
+db.ROLES = ["admin", "procurement_manager", "inspection_manager","client"];
+module.exports = db;
